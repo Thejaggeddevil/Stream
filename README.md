@@ -42,19 +42,22 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
   - FLASK_MONGODB_URI=mongodb://127.0.0.1:27017/streamad
   - PORT=5002
   - CORS_ORIGINS=http://localhost:3000
-  - APTOS_CONSUMER_KEY=your_twitter_consumer_key
-  - APTOS_CONSUMER_SECRET=your_twitter_consumer_secret
-  - APTOS_BEARER_TOKEN=your_twitter_bearer
-  - APTOS_ACCESS_TOKEN=your_twitter_access_token
-  - APTOS_ACCESS_TOKEN_SECRET=your_twitter_access_secret
+  - ENABLE_TWITTER=0
+  - APTOS_CONSUMER_KEY=
+  - APTOS_CONSUMER_SECRET=
+  - APTOS_BEARER_TOKEN=
+  - APTOS_ACCESS_TOKEN=
+  - APTOS_ACCESS_TOKEN_SECRET=
 - node-backend/.env
   - NODE_PORT=5003
   - APTOS_NETWORK=testnet
   - APTOS_PRIVATE_KEY=0x...
+  - APTOS_MODULE_ADDRESS=0x<your_aptos_account_address>
 - client/.env.local
   - NEXT_PUBLIC_API_BASE_URL=http://localhost:5002
   - NEXT_PUBLIC_NODE_BACKEND_URL=http://localhost:5003
   - NEXT_PUBLIC_APTOS_NETWORK=testnet
+  - NEXT_PUBLIC_ENABLE_TWITTER=false
 
 ## Contracts (Aptos)
 - Set your account in `contract/.aptos/config.yaml` (do NOT commit secrets)
@@ -85,4 +88,3 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
 
 ## License
 MIT
-
