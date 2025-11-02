@@ -1,0 +1,10 @@
+---
+profiles:
+  default:
+    network: Testnet
+    # DO NOT COMMIT REAL KEYS. Replace these locally in a non-versioned file.
+    private_key: "REPLACE_WITH_YOUR_PRIVATE_KEY"
+    public_key: "REPLACE_WITH_YOUR_PUBLIC_KEY"
+    account: REPLACE_WITH_YOUR_ACCOUNT_ADDRESS
+    rest_url: "https://fullnode.testnet.aptoslabs.com"
+    faucet_url: "https://faucet.testnet.aptoslabs.com"

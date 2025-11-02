@@ -1,0 +1,26 @@
+package-lock.json
+node_modules/
+
+# Next.js
+client/.next/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env files
+.env
+*.env
+**/.env
+**/.env.local
+
+# Build artifacts
+**/build/
+dist/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
