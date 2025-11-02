@@ -66,14 +66,8 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
   - `aptos move compile`
   - `aptos move publish --profile default`
 
-## Deploy (Docker)
-- Fill `backend/.env`, `node-backend/.env`, `client/.env.local` as described below.
-- Then run:
-  - `docker compose up -d --build`
-- Services:
-  - Web: http://localhost:3000
-  - API: http://localhost:5002
-  - Chain (Node): http://localhost:5003
+
+
 
 ## Production notes
 - Do not commit secrets (.env, Aptos keys)
@@ -86,5 +80,5 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
 - Removed hard-coded private keys and sanitized Aptos config
 - Externalized all credentials to .env files
 
-## License
-MIT
+![Uploading image.png…]()
+
