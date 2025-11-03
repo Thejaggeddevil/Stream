@@ -60,13 +60,25 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
   - NEXT_PUBLIC_ENABLE_TWITTER=false
 
 ## Contracts (Aptos)
+This project is deployed on Aptos Testnet.
+- Module address: `0x263aaa5b729485592e0e1ed8a94d588736d5b01c8b2d48dfa288d54ef7e22168`
+- Example transaction (testnet): https://explorer.aptoslabs.com/txn/0x35c45acfd409c70cea24cd98dcfa3d24411fae09bb1173e726b1ac119f2397dd?network=testnet
+
+Local build/publish (if you need to re-deploy):
 - Set your account in `contract/.aptos/config.yaml` (do NOT commit secrets)
-- Publish to testnet:
+- Run:
   - `cd contract`
   - `aptos move compile`
-  - `aptos move publish --profile default`
+  - `aptos move publish --profile default --named-addresses kenil=0x263aaa5b729485592e0e1ed8a94d588736d5b01c8b2d48dfa288d54ef7e22168`
 
-## Deploy (Docker)
+## Run against Aptos (no Docker)
+- node-backend/.env: set APTOS_PRIVATE_KEY and APTOS_MODULE_ADDRESS above
+- Start services locally:
+  - API: `$env:FLASK_MONGODB_URI=...; $env:PORT=5002; python backend/app.py`
+  - Node: `npm run start --prefix node-backend`
+  - Web: `npx --yes --prefix client next dev -p 3000`
+
+## Deploy (Docker) [optional]
 - Fill `backend/.env`, `node-backend/.env`, `client/.env.local` as described below.
 - Then run:
   - `docker compose up -d --build`
@@ -88,3 +100,7 @@ A modern, Aptos-powered tweet promotion platform: Next.js client, Flask API, Nod
 
 ## License
 MIT
+
+## Explorer screenshot (Aptos Testnet)
+
+![Aptos testnet transaction](docs/aptos-tx.png)
